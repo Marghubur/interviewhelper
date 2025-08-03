@@ -31,6 +31,7 @@ export class SidemenuComponent {
       icon: 'fas fa-server',
       expanded: true,
       children: [
+        { id: 'c#', label: 'C#', icon: '' },
         { id: 'dotnet', label: '.NET', icon: '' },
         { id: 'basic-questions', label: 'Basic Questions', icon: '' },
         { id: 'intermediate-questions', label: 'Intermediate Questions', icon: '' },

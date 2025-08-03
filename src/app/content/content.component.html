@@ -1,1 +1,32 @@
-<div [innerHTML]="content"></div>
+<div class="col-md-12">
+    <div class="col-md-12 mb-2 row align-items-center justify-content-between position-sticky sticky-position bg-white border-bottom py-2">
+        <div class="col-md-11 fw-bold text-truncate">
+            Title
+        </div>
+        <div class="col-auto text-end">
+            <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+    <div [innerHTML]="safeHtml"></div>
+</div>
+
+<!-- Question Number OffCanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Question</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+     <div class="grid-wrapper">
+        <div class="css-grid-container">
+            @for (item of questionNumbers; track $index) {
+                <button type="button"  class="btn btn-outline-primary number-btn">
+                  {{ item }}
+                </button>
+            }
+        </div>
+      </div>
+  </div>
+</div>

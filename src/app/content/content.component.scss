@@ -1,0 +1,20 @@
+ .grid-wrapper,
+ .grid-wrapper-alt,
+ .grid-wrapper-flex {
+     background: #f8f9fa;
+     padding: 20px;
+     border-radius: 10px;
+     border: 2px solid #dee2e6;
+    //  margin-bottom: 20px;
+ }
+
+ .css-grid-container {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 10px;
+     width: 100%;
+ }
+
+ .sticky-position {
+    top: var(--header-height);
+ }

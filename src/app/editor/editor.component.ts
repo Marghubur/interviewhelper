@@ -39,7 +39,7 @@ export class EditorComponent implements OnInit {
   }
 
   loadData() {
-    this.http.get("assets/title.json").subscribe({
+    this.http.get("assets/dotnet.json").subscribe({
       next: (res: any) => {
         this.editorForm.patchValue({
           EditorContent: res
