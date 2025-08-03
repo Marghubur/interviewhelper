@@ -1,0 +1,18 @@
+ <form [formGroup]="editorForm">
+     <div class="col-md-12 mb-3">
+         <button class="btn btn-primary" (click)="savePost()">Save</button>
+     </div>
+     <div class="col-md-12 mb-3">
+         <label class="form-label">Title</label>
+         <input type="text" class="form-control" formControlName="Title" placeholder="Title">
+     </div>
+     <div class="NgxEditor__Wrapper">
+       <ngx-editor-menu [editor]="editor" [toolbar]="toolbar" [colorPresets]="colorPresets"> </ngx-editor-menu>
+       <ngx-editor
+         [editor]="editor"
+         formControlName="EditorContent"
+         [disabled]="false"
+         [placeholder]="'Type here...'"
+       ></ngx-editor>
+     </div>
+ </form>

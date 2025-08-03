@@ -7,7 +7,6 @@
 }
 
 .app-container {
-    min-height: 100vh;
     background-color: #f8fafc;
 }
 
@@ -29,5 +28,5 @@
 .main-wrapper {
     display: flex;
     margin-top: var(--header-height);
-    min-height: calc(100vh - var(--header-height));
+    min-height: calc(100vh - var(--header-height) - 4px);
 }

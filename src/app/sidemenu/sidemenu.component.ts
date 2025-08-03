@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './sidemenu.component.scss'
 })
 export class SidemenuComponent {
-  navItems: any[] = [
+  navItems: NavItem[] = [
     {
       id: 'getting-started',
       label: 'Getting Started',
@@ -63,9 +63,17 @@ export class SidemenuComponent {
     }
   ];
 
-  toggleNav(item: any) {
+  toggleNav(item: NavItem) {
     if (item.children) {
       item.expanded = !item.expanded;
     }
   }
+}
+
+interface NavItem {
+  id: string;
+  label: string;
+  icon: string;
+  expanded?: boolean;
+  children?: NavItem[];
 }
