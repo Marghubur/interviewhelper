@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --bs-primary: #6366f1;
+    --bs-primary-rgb: 99, 102, 241;
+    --sidebar-width: 280px;
+    --header-height: 60px;
+}
+
+.app-container {
+    min-height: 100vh;
+    background-color: #f8fafc;
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 8px 16px;
+}
+
+.btn-outline-secondary {
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 8px 16px;
+}
+
+/* Main Wrapper */
+.main-wrapper {
+    display: flex;
+    margin-top: var(--header-height);
+    min-height: calc(100vh - var(--header-height));
+}

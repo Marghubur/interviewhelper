@@ -1,0 +1,26 @@
+<aside class="sidebar">
+    <nav class="sidebar-nav">
+        <ul class="nav flex-column">
+            <li class="nav-item" *ngFor="let item of navItems">
+                <a class="nav-link d-flex align-items-center justify-content-between"
+                    [class.active]="item.id === 'getting-started'" (click)="toggleNav(item)" href="#">
+                    <div class="d-flex align-items-center">
+                        <i [class]="item.icon + ' me-2'"></i>
+                        <span>{{ item.label }}</span>
+                    </div>
+                    <i *ngIf="item.children" class="fas fa-chevron-down transition-transform"
+                        [class.rotated]="item.expanded"></i>
+                </a>
+
+                <!-- Submenu -->
+                <ul *ngIf="item.children && item.expanded" class="nav flex-column submenu">
+                    <li class="nav-item" *ngFor="let child of item.children">
+                        <a class="nav-link submenu-link" [class.active]="child.id === 'basic-questions'" href="#">
+                            {{ child.label }}
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</aside>
