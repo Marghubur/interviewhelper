@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Editor, NgxEditorComponent, NgxEditorMenuComponent, Toolbar } from 'ngx-editor';
+import { Editor, NgxEditorModule, Toolbar } from 'ngx-editor';
 
 @Component({
   selector: 'app-editor',
   standalone: true,
-  imports: [NgxEditorComponent, NgxEditorMenuComponent, FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule, NgxEditorModule],
   templateUrl: './editor.component.html',
   styleUrl: './editor.component.scss'
 })
